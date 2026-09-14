@@ -14,6 +14,9 @@ app = FastAPI(title="DocuBot")
 def health_check():
     return {"status": "ok", "service": "DocuBot"}
 
+@app.get("/interactions")
+def get_interactions(db: Session = Depends(get_db)):
+    return db.query(Interaction).order_by(Interaction.id.desc()).all()
 
 @app.post("/webhook/telegram")
 async def telegram_webhook(update: dict, db: Session = Depends(get_db)):

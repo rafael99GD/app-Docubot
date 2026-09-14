@@ -68,6 +68,7 @@ uvicorn app.main:app --reload
 - Endpoint para consultar el histórico de un usuario
 - Botones interactivos de Telegram para pedir "más detalle" o "solo los puntos clave"
 - Tests con `pytest`
+- Proteger el endpoint de interactions para evitar que cualquiera pueda acceder (temporal para las pruebas) 
 
 ---
 Proyecto personal de Rafael, para explorar Python/FastAPI + IA aplicada más allá de su stack principal (Java/Spring Boot).

@@ -22,11 +22,11 @@ def summarize_document(text: str) -> str:
     truncated = text[:MAX_CHARS]
 
     response = client.models.generate_content(
-        model="gemini-3.6-flash",
+        model="gemini-3.5-flash-lite",
         contents=f"Resume este documento:\n\n{truncated}",
         config=types.GenerateContentConfig(
             system_instruction=SYSTEM_PROMPT,
-            max_output_tokens=1024,
+            max_output_tokens=2048,
         ),
     )
     return response.text

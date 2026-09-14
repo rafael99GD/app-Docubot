@@ -9,7 +9,7 @@ Proyecto hecho para practicar exactamente el tipo de herramienta que construyen 
 1. El usuario envía un PDF o .txt al bot por Telegram.
 2. FastAPI recibe la actualización vía webhook (`POST /webhook/telegram`).
 3. Se descarga el archivo desde la API de Telegram y se extrae el texto (`pdfplumber` para PDFs).
-4. El texto se envía a la API de Claude (Anthropic) pidiendo un resumen + puntos clave.
+4. El texto se envía a la API de Gemini (Google) pidiendo un resumen + puntos clave.
 5. El resumen se devuelve al usuario por Telegram.
 6. Cada interacción (usuario, documento, resumen) se guarda en PostgreSQL.
 
